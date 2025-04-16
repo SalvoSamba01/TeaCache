@@ -227,6 +227,9 @@ def main():
     
     # Start sampling
     # TODO: batch inference check
+
+    print("Thresh: ",hunyuan_video_sampler.pipeline.transformer.__class__.rel_l1_thresh)
+
     outputs = hunyuan_video_sampler.predict(
         prompt=args.prompt, 
         height=args.video_size[0],
